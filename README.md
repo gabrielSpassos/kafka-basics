@@ -31,7 +31,7 @@ bin/kafka-server-start.sh config/server-2.properties
 <details>
   <summary>Detail to start brokers</summary>
   
-  Change id `broker.id=0` at `server.properties` to a different number for each broker. 
+  Change `broker.id=${id}`, `listeners=PLAINTEXT://:${port}`, `log.dirs=/tmp/kafka-logs-${id}` at `server.properties` to a different number for each broker. 
 </details>
 
 * Create topic with replication of 3
